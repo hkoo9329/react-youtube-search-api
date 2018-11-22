@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
-import _ from 'lodash'
-import SearchBar from './components/SearchBar'
-import VideoList from './components/VideoList'
-import VideoDetail from './components/VideoDetail'
+import _ from 'lodash';
+import SearchBar from './components/SearchBar';
+import VideoList from './components/VideoList';
+import VideoDetail from './components/VideoDetail';
+import style from './index.css';
 const API_KEY = 'AIzaSyCYg4N7FJrqWLl85ofPiLogM7orF0_CAt0';
 class App extends Component {
   constructor(props){
@@ -22,15 +23,14 @@ class App extends Component {
 
 
   render() {
-    const videoSearch = _.debounce((query)=> this.searching(query),500)
+    const videoSearch = (query)=> this.searching(query)
     return (
-      
-      <div>
-        <img className='logoImage' src ='logo.png'/>
-        <SearchBar onSearchInput ={videoSearch}/>
-        <VideoDetail video= {this.state.firstVideo} />
-        <VideoList selectVideo={ (firstVideo) => this.setState({firstVideo})} videos = {this.state.videos}/>
-      </div>
+        <div className='mainBox'>
+          <img className='logoImage' src ='logo.png'/>
+          <SearchBar onSearchInput ={videoSearch}/>
+          <VideoDetail video= {this.state.firstVideo} />
+          <VideoList selectVideo={ (firstVideo) => this.setState({firstVideo})} videos = {this.state.videos}/>
+        </div>
     );
   }
 }
