@@ -8,12 +8,13 @@ const VideoListItem = (props) => {
                 <div>
                     <img className = 'thumbnail' src = {props.video.snippet.thumbnails.default.url}/>
                     <div>
-                        <div>{props.video.snippet.title}</div>
+                        <div>{props.video.snippet.title} </div>
+                        <span className="channel-title">by {props.video.snippet.channelTitle}</span>
                      </div>
                 </div>
             </div>
 
-            
+
         </li>
     )
 }
