@@ -1,0 +1,46 @@
+.search_bar {
+  margin : 20px ;
+  text-align : centre ;
+}
+
+.search_bar input {
+  width: 80%;
+}
+.list-group-item {
+  cursor: pointer;
+}
+
+.list-group-item:hover{
+  background-color: #d6cecd;
+}
+
+.logoImage{
+  margin: 5px;
+  margin-top: 10px;
+  width: 80px;
+  height: 50px;
+  float: left;
+}
+
+body{
+  background-color: black;
+  float:center;
+}
+.details{
+  color: white;
+  text-align: center;
+}
+
+.video-detail{
+  width: 70%;
+  float: inherit;
+}
+
+.mainBox{
+  width: 120%;
+  float:left;
+}
+.list-group{
+  width: 30%;
+  float: right;
+}
