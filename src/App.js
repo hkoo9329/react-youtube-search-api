@@ -5,7 +5,7 @@ import SearchBar from './components/SearchBar';
 import VideoList from './components/VideoList';
 import VideoDetail from './components/VideoDetail';
 import style from './index.css';
-const API_KEY = 'YOUR API KEY';
+const API_KEY = 'AIzaSyCYg4N7FJrqWLl85ofPiLogM7orF0_CAt0';
 class App extends Component {
   constructor(props){
     super(props)
@@ -18,7 +18,7 @@ class App extends Component {
     +query+"&key="+API_KEY;
     fetch(url)
       .then(response => response.json())
-      .then(contents => this.setState({ videos:contents.items, firstVideo:contents.items[0]}))
+      .then(contents => this.setState({videos:contents.items, firstVideo:contents.items[0]}))
   }
 
 

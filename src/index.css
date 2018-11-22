@@ -44,3 +44,11 @@ body{
   width: 30%;
   float: right;
 }
+
+.channel-title{
+  color:red;
+}
+
+time{
+  color:gray;
+}
